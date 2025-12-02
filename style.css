@@ -10,89 +10,115 @@ body {
   color: #ffffff;
 }
 
-.navbar {
+.container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  min-height: 100vh;
 }
 
-.navbar a {
-  margin-left: 15px;
-  color: #ffffff;
+/* SIDEBAR */
+.sidebar {
+  width: 280px;
+  background: rgba(0,0,0,0.4);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sidebar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.sidebar h1 {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.role {
+  color: #6dd5fa;
+  margin: 10px 0 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #fff;
   text-decoration: none;
+  margin: 15px 0;
   font-weight: bold;
 }
 
-.hero {
-  text-align: center;
-  padding: 60px 20px;
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 60px;
 }
 
-.hero img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
+.content section {
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
-.section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  list-style: none;
-}
-
-.skills li {
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 8px 15px;
   background: #6dd5fa;
   color: #000;
-  padding: 10px 15px;
   border-radius: 20px;
   font-weight: bold;
 }
 
+/* PROJECTS */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+  gap: 30px;
 }
 
 .project-card {
-  background: linear-gradient(145deg, #1f1c3c, #2a2755);
+  background: rgba(0,0,0,0.4);
   padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
+  border-radius: 15px;
 }
 
 .project-card img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .project-card a {
   display: block;
-  color: #6dd5fa;
   margin-top: 10px;
+  color: #6dd5fa;
   text-decoration: none;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
+.project-card span {
+  display: block;
+  margin-top: 10px;
   font-size: 14px;
   opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    padding: 30px;
+  }
 }
