@@ -1,122 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Alice Moura Alves | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <h1>Alice Moura Alves</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#sobre">About</a>
-      <a href="#habilidades">Skills</a>
-      <a href="#projetos">Projects</a>
-      <a href="#contato">Contact</a>
-    </nav>
-  </header>
+<div class="container">
 
-  <!-- HOME -->
-  <section id="home" class="hero">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
     <img src="assets/profile.jpg" alt="Alice Moura Alves">
-    <h2>Data Scientist in Training</h2>
-    <p>Turning data into insights for smarter decisions.</p>
-  </section>
+    <h1>Alice<br>Moura Alves</h1>
+    <p class="role">Data Scientist in Training</p>
 
-  <!-- ABOUT -->
-  <section id="sobre" class="section">
-    <h2>About Me</h2>
-    <p>
-      Sou um estudante do ensino médio profundamente envolvido em estudos de Ciência de Dados, com
-      experiência prática em análise de dados, aprendizado de máquina e visualização de dados.
-    </p>
-    <p>
-     Desenvolvi projetos focados em problemas do mundo real, aplicando raciocínio estatístico
-     e modelos preditivos para extrair insights dos dados.
-    </p>
-    <p>
-      Meu objetivo é crescer como Cientista de Dados e contribuir para a tomada de decisões
-      orientada por dados em organizações inovadoras.
-    </p>
-  </section>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
 
-  <!-- SKILLS -->
-  <section id="habilidades" class="section">
-    <h2>Skills</h2>
-    <ul class="skills">
-      <li>Python</li>
-      <li>Pandas</li>
-      <li>NumPy</li>
-      <li>Scikit-learn</li>
-      <li>Data Analysis</li>
-      <li>Machine Learning</li>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
+  <!-- MAIN CONTENT -->
+  <main class="content">
 
-  <!-- PROJECTS -->
-  <section id="projetos" class="section">
-    <h2>Featured Projects</h2>
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a high school student focused on Data Science, with hands-on
+        experience in data analysis, machine learning and visualization.
+      </p>
+      <p>
+        I develop projects based on real-world problems, applying statistical
+        reasoning to generate insights from data.
+      </p>
+      <p>
+        My goal is to grow as a Data Scientist and contribute to data-driven
+        decision-making in innovative organizations.
+      </p>
+    </section>
 
-    <div class="projects">
-
-      <div class="project-card">
-        <img src="assets/projeto-lista-compras.png" alt="Shopping List Project">
-        <h3>Shopping List Web System</h3>
-        <p>
-          Responsive shopping list system with automatic calculations,
-          local storage, and accessibility-focused design.
-        </p>
-        <a href="https://github.com/AliceMouraAlves30/listadecompras" target="_blank">View Repository</a>
-        <span>HTML • CSS • JavaScript</span>
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>Scikit-learn</span>
+        <span>Data Analysis</span>
+        <span>Machine Learning</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Git & GitHub</span>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="assets/projeto-regressao-aids.png" alt="HIV Prediction Project">
-        <h3>HIV Infection Prediction</h3>
-        <p>
-          Logistic regression model applied to health and demographic data,
-          including exploratory analysis and evaluation metrics.
-        </p>
-        <a href="https://anaconda.com/app/share/notebooks/82de66ae-4b11-4dbd-81a1-d66a4b4c1188/overview" target="_blank">
-          View Notebook
-        </a>
-        <span>Python • Pandas • Scikit-learn</span>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="projects">
+
+        <div class="project-card">
+          <img src="assets/projeto-lista-compras.png">
+          <h3>Shopping List Web System</h3>
+          <p>Accessible and responsive shopping list system with automatic calculations.</p>
+          <a href="https://github.com/AliceMouraAlves30/listadecompras" target="_blank">
+            View Repository
+          </a>
+          <span>HTML • CSS • JavaScript</span>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/projeto-regressao-aids.png">
+          <h3>HIV Infection Prediction</h3>
+          <p>Logistic regression model applied to health and demographic data.</p>
+          <a href="https://anaconda.com/app/share/notebooks/82de66ae-4b11-4dbd-81a1-d66a4b4c1188/overview" target="_blank">
+            View Notebook
+          </a>
+          <span>Python • Pandas • Scikit-learn</span>
+        </div>
+
+        <div class="project-card">
+          <img src="assets/projeto-busca-alunos.png">
+          <h3>Student Search System</h3>
+          <p>Web-based system for searching and filtering student records.</p>
+          <a href="https://elaborate-jalebi-bb5f26.netlify.app/" target="_blank">
+            Live Project
+          </a>
+          <span>HTML • CSS • JavaScript</span>
+        </div>
+
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="assets/projeto-busca-alunos.png" alt="Student Search System">
-        <h3>Student Search System</h3>
-        <p>
-          Web-based system to search and filter student records
-          with a clean and responsive interface.
-        </p>
-        <a href="https://elaborate-jalebi-bb5f26.netlify.app/" target="_blank">Live Project</a>
-        <span>HTML • CSS • JavaScript</span>
-      </div>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:alice.datascience.sc@gmail.com">alice.datascience.sc@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/alice-moura-alves1" target="_blank">linkedin.com/in/alice-moura-alves1</a></p>
+      <p>GitHub: <a href="https://github.com/AliceMouraAlves30" target="_blank">github.com/AliceMouraAlves30</a></p>
+    </section>
 
-    </div>
-  </section>
+  </main>
+</div>
 
-  <!-- CONTACT -->
-  <section id="contato" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:alice.datascience.sc@gmail.com">alice.datascience.sc@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/alice-moura-alves1" target="_blank">linkedin.com/in/alice-moura-alves1</a></p>
-    <p>GitHub: <a href="https://github.com/AliceMouraAlves30" target="_blank">github.com/AliceMouraAlves30</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Alice Moura Alves</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
