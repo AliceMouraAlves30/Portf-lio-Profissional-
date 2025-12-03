@@ -1,35 +1,35 @@
-/* === 1. Variáveis, Reset e Fontes === */
+/* Importação da fonte Varela Round (arredondada) - Já incluída no HTML, mas boa prática manter aqui */
+/* @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); */
 
-/* Importação da fonte Varela Round já está no HTML */
+/* === 1. Variáveis, Reset e Estilos Globais === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
-    /* Cores Azuis (Dark/Neon) */
-    --blue-dark: #001233; /* Fundo Principal (Azul Royal Escuro) */
-    --blue-royal: #002D62; /* Cor da Sidebar e Cards */
-    --blue-vibrant: #00BFFF; /* Azul Céu/Neon (Destaques, Pulso) */
-    --blue-light: #4DFFFF; /* Azul Claro (Degradê/Texto) */
+    /* Cores Azuis (Inspiradas no Azul Royal/Claro) */
+    --blue-dark: #001233; /* Fundo Principal (Quase preto/Azul Royal Escuro) */
+    --blue-royal: #002D62; /* Cor da Sidebar e Cards (Azul Royal) */
+    --blue-vibrant: #00BFFF; /* Azul Céu/Neon (Destaques, Links, Pulso) */
+    --blue-light: #4DFFFF; /* Azul Claro (Degradê) */
     --white: #FFFFFF;
     
     /* Tipografia */
     --font-primary: 'Varela Round', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-primary);
-}
-
 body {
-    /* Degradê sutil para profundidade */
-    background: linear-gradient(135deg, var(--blue-dark) 0%, #001f5c 100%);
+    font-family: var(--font-primary);
+    background-color: var(--blue-dark);
     color: var(--white);
     line-height: 1.6;
     min-height: 100vh;
 }
 
 a {
-    color: var(--blue-light);
+    color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -38,19 +38,21 @@ a:hover {
     color: var(--blue-vibrant);
 }
 
-/* === 2. Layout Principal (Sidebar + Content) === */
+h1, h2, h3 {
+    font-weight: 700;
+}
 
+/* === 2. Layout Principal (Sidebar + Content) === */
 .container {
     display: flex;
     min-height: 100vh;
 }
 
-/* --- Sidebar (Barra Lateral Fixo) --- */
+/* --- Sidebar (Barra Lateral) --- */
 .sidebar {
-    width: 280px;
+    width: 280px; /* Um pouco mais larga */
     padding: 3rem 2rem;
-    position: sticky; /* Fixo enquanto o conteúdo rola */
-    top: 0;
+    position: fixed;
     height: 100vh;
     background-color: var(--blue-royal);
     box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
@@ -58,17 +60,16 @@ a:hover {
 }
 
 .sidebar h1 {
-    font-size: 3rem; 
+    font-size: 3rem; /* Fonte maior */
     line-height: 1.1;
     margin-bottom: 0.5rem;
-    color: var(--blue-light);
+    color: var(--blue-light); /* Título em azul claro */
 }
 
 .sidebar .role {
     color: var(--blue-vibrant);
     font-size: 1.1rem;
-    margin-bottom: 4rem;
-    font-weight: bold;
+    margin-bottom: 4rem; /* Mais espaçamento */
 }
 
 .sidebar nav a {
@@ -77,49 +78,46 @@ a:hover {
     padding: 0.8rem 0;
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
-    text-align: left;
 }
 
 .sidebar nav a:hover {
     color: var(--white);
     border-bottom: 2px solid var(--blue-vibrant);
-    padding-left: 10px;
+    padding-left: 10px; /* Pequeno efeito lateral */
 }
 
-/* --- Conteúdo Principal (Cards) --- */
+/* --- Conteúdo Principal --- */
 .content {
     margin-left: 280px;
     flex-grow: 1;
     padding: 3rem;
 }
 
-/* Estilo para os cards de seção (Tópicos separados) */
+/* Card que separa cada tópico (Azul escuro com cantos arredondados) */
 .content-card {
     background-color: var(--blue-royal);
     padding: 40px;
-    border-radius: 15px; 
-    margin-bottom: 30px; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 15px; /* Cantos bem arredondados */
+    margin-bottom: 30px; /* Espaço entre os cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
 }
 
 .content-card:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px); /* Efeito sutil de elevação ao passar o mouse */
 }
 
 h2 {
-    font-size: 2.8rem;
+    font-size: 2.8rem; /* Fonte maior para títulos */
     color: var(--blue-vibrant);
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid var(--blue-vibrant);
-    /* Efeito de brilho neon no título */
-    text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
 }
 
 /* === 3. Estilos de Seção === */
 
-/* --- About Me (com Efeito Pulsante) --- */
+/* --- About Me --- */
 .about-flex {
     display: flex;
     align-items: flex-start;
@@ -128,28 +126,27 @@ h2 {
 
 .about-text p {
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Texto maior */
 }
 
-/* Wrapper para o efeito de Pulso */
+/* Efeito Pulsante (HBO Max Inspired) */
 .profile-wrapper {
     position: relative;
-    width: 180px; 
+    width: 180px; /* Tamanho do wrapper (maior) */
     height: 180px;
     flex-shrink: 0;
 }
 
-.profile-wrapper img {
+#about img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--blue-light);
     z-index: 2;
-    /* Usa a imagem diretamente, removendo a necessidade de #about img */
+    transition: border-color 0.3s ease;
 }
 
-/* Elemento ::before para criar o pulso */
 .profile-wrapper::before {
     content: '';
     position: absolute;
@@ -170,41 +167,40 @@ h2 {
         opacity: 0.75;
     }
     100% {
-        transform: scale(1.3);
+        transform: scale(1.3); /* Um pouco maior */
         opacity: 0;
     }
 }
 
-/* --- Skills (Pastilhas Neon) --- */
+/* --- Skills --- */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .skill-item {
-    /* Degradê para o fundo da pastilha */
-    background: linear-gradient(45deg, var(--blue-vibrant) 0%, var(--blue-light) 100%); 
+    background: linear-gradient(45deg, var(--blue-vibrant) 0%, var(--blue-light) 100%); /* Degradê de azul */
     color: var(--blue-dark);
     padding: 0.7rem 1.5rem;
-    border-radius: 25px; 
+    border-radius: 25px;
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    /* Brilho neon na pastilha */
-    box-shadow: 0 0 10px rgba(0, 191, 255, 0.8), 0 2px 5px rgba(0, 0, 0, 0.5); 
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.8), 0 2px 5px rgba(0, 0, 0, 0.5); /* Brilho neon azul */
+    transition: transform 0.2s ease;
 }
 
 .skill-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px var(--blue-vibrant);
+    background: var(--white);
+    color: var(--blue-dark);
     cursor: default;
 }
 
-/* --- Projects (Cards com Borda Neon) --- */
+/* --- Projects --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -215,22 +211,25 @@ h2 {
     background-color: var(--blue-dark);
     padding: 20px;
     border-radius: 12px;
-    /* Borda sutil que brilha no hover */
-    border: 1px solid var(--blue-royal); 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--blue-royal);
 }
 
 .project-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 0 15px var(--blue-vibrant); 
-    border-color: var(--blue-vibrant); /* A borda externa acende */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 0 20px var(--blue-vibrant); /* Brilho neon forte */
 }
 
 .project-card h3 {
     color: var(--blue-light);
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 .project-card img {
@@ -252,6 +251,7 @@ h2 {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.9rem;
+    transition: background-color 0.3s ease;
 }
 
 .project-card a:hover {
@@ -305,7 +305,10 @@ h2 {
         border-bottom: none;
         background-color: var(--blue-dark);
         border-radius: 5px;
-        text-align: center;
+    }
+    
+    .sidebar h1 {
+        font-size: 2.5rem;
     }
 
     .content {
@@ -316,14 +319,10 @@ h2 {
     .content-card {
         padding: 30px;
     }
-    
+
     .about-flex {
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
-
-    .about-text {
-        text-align: left; /* Mantém o texto justificado/alinhado em mobile */
     }
 }
